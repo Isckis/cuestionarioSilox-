@@ -1,0 +1,427 @@
+{
+  "title": "¡Vamos más lento, por favor!",
+  "author": "Neva Milicic",
+  "description": "Cuestionario de comprensión lectora - 3° básico",
+  "questions": [
+    {
+      "id": 1,
+      "category": "Comprensión",
+      "question": "¿Quién es el protagonista del libro?",
+      "options": {
+        "a": "Andrés",
+        "b": "Rafael",
+        "c": "Lucas",
+        "d": "Martina"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 2,
+      "category": "Comprensión",
+      "question": "¿Por qué la profesora de Matemática retó a Rafael?",
+      "options": {
+        "a": "Porque no sabía la respuesta",
+        "b": "Porque se apuró en contestar antes de que terminara la pregunta",
+        "c": "Porque no trajo el cuaderno",
+        "d": "Porque habló con un compañero"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 3,
+      "category": "Comprensión",
+      "question": "¿Qué olvidó Rafael el día que debía hacer la tarea de Lenguaje?",
+      "options": {
+        "a": "El lápiz",
+        "b": "El cuaderno",
+        "c": "El libro",
+        "d": "La mochila"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 4,
+      "category": "Comprensión",
+      "question": "¿Qué le recomienda la mamá a Rafael para mejorar?",
+      "options": {
+        "a": "Hacer las cosas más rápido",
+        "b": "Prestar más atención y hacer las cosas más lentamente",
+        "c": "Dejar de estudiar",
+        "d": "Pedir ayuda siempre a los compañeros"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 5,
+      "category": "Comprensión",
+      "question": "¿Qué le pasó a Rafael el día del paseo de curso?",
+      "options": {
+        "a": "Se levantó muy temprano, durmió mal y anduvo con sueño",
+        "b": "Se quedó dormido y llegó tarde",
+        "c": "Olvidó la mochila",
+        "d": "Se peleó con la profesora"
+      },
+      "correct": "a"
+    },
+    {
+      "id": 6,
+      "category": "Comprensión",
+      "question": "¿Cómo llama Rafael a su abuela?",
+      "options": {
+        "a": "Abuelita",
+        "b": "Abu",
+        "c": "Nona",
+        "d": "Tía"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 7,
+      "category": "Comprensión",
+      "question": "Según la abuela, ¿qué son los errores?",
+      "options": {
+        "a": "Algo malo que hay que esconder",
+        "b": "Una oportunidad para aprender",
+        "c": "Una vergüenza",
+        "d": "Algo que solo les pasa a los niños"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 8,
+      "category": "Comprensión",
+      "question": "¿Cuál es el secreto que le entrega la abuela a Rafael para no equivocarse en las pruebas?",
+      "options": {
+        "a": "Estudiar solo la noche anterior",
+        "b": "Leer siempre las instrucciones al menos dos veces, con mucho cuidado",
+        "c": "Contestar muy rápido",
+        "d": "Preguntar siempre al compañero"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 9,
+      "category": "Comprensión",
+      "question": "¿Qué encontró Rafael dentro de su mochila cuando la ordenó?",
+      "options": {
+        "a": "Solo libros y cuadernos",
+        "b": "Un envoltorio de sándwich, una circular antigua y una manzana a medio comer",
+        "c": "Juguetes nuevos",
+        "d": "Dinero"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 10,
+      "category": "Comprensión",
+      "question": "¿Qué disfraz tenía que preparar Rafael?",
+      "options": {
+        "a": "De superhéroe",
+        "b": "De astronauta",
+        "c": "De animal",
+        "d": "De payaso"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 11,
+      "category": "Comprensión",
+      "question": "¿Qué significa para Rafael “andar a 60 kilómetros por hora y no a 120”?",
+      "options": {
+        "a": "Correr más rápido",
+        "b": "Hacer las cosas más despacio y con calma",
+        "c": "Ir en auto",
+        "d": "Llegar tarde"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 12,
+      "category": "Comprensión",
+      "question": "¿Qué notó la hermana Victoria en la mesa?",
+      "options": {
+        "a": "Que Rafael comió muy rápido",
+        "b": "Que Rafael comió lentamente, no se manchó y terminó después que ella",
+        "c": "Que Rafael no quiso comer",
+        "d": "Que Rafael se peleó"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 13,
+      "category": "Comprensión",
+      "question": "¿Qué decidió hacer Rafael con su pieza?",
+      "options": {
+        "a": "Dejarla igual",
+        "b": "Ordenarla, botar lo que no servía y clasificar sus cosas",
+        "c": "Pintarla de otro color",
+        "d": "Llenarla de más juguetes"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 14,
+      "category": "Comprensión",
+      "question": "Según el libro, ¿para qué sirve una agenda?",
+      "options": {
+        "a": "Solo para dibujar",
+        "b": "Para anotar pruebas y actividades y no olvidarse ni comprometerse de más",
+        "c": "Para guardar dinero",
+        "d": "Para jugar"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 15,
+      "category": "Comprensión",
+      "question": "¿Qué le pasó a Rafael en casa de Anita con los dulces?",
+      "options": {
+        "a": "No quiso comer ninguno",
+        "b": "Se comió cuatro dulces en vez de dos porque iba muy acelerado",
+        "c": "Los compartió perfectamente",
+        "d": "Se los llevó a su casa"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 16,
+      "category": "Comprensión",
+      "question": "¿Qué consejo le dio el amigo Lucas sobre prestar atención?",
+      "options": {
+        "a": "Cerrar los ojos",
+        "b": "Mirar a los ojos de la persona que habla",
+        "c": "Hablar al mismo tiempo",
+        "d": "Mirar por la ventana"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 17,
+      "category": "Comprensión",
+      "question": "¿Qué le puso la profesora de Inglés a Rafael?",
+      "options": {
+        "a": "Una anotación negativa",
+        "b": "Una anotación positiva por estar atento",
+        "c": "Un castigo",
+        "d": "Nada especial"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 18,
+      "category": "Comprensión",
+      "question": "¿Qué hicieron Rafael y Lucas juntos?",
+      "options": {
+        "a": "Se pelearon",
+        "b": "Formaron una sociedad de apoyo mutuo para ir más lento y prestar más atención",
+        "c": "Dejaron de estudiar",
+        "d": "Se fueron de paseo"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 19,
+      "category": "Comprensión",
+      "question": "¿Cómo se sintió Rafael después de casi un mes de practicar ir más lento?",
+      "options": {
+        "a": "Cansado y aburrido",
+        "b": "Contento y orgulloso, porque le estaba resultando",
+        "c": "Más apurado que antes",
+        "d": "Triste"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 20,
+      "category": "Comprensión",
+      "question": "¿Qué le dice la abuela al final sobre la mente rápida?",
+      "options": {
+        "a": "Que es un problema y hay que eliminarla",
+        "b": "Que hay que valorarla, pero también tomarse las cosas con calma",
+        "c": "Que no sirve para nada",
+        "d": "Que solo sirve para jugar"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 21,
+      "category": "Orden cronológico",
+      "question": "Ordena estos hechos del comienzo del libro:\n1. Rafael olvida el cuaderno de Lenguaje.\n2. La profesora de Matemática lo retó por apurarse.\n3. La mamá le habla sobre ir más lento.\n4. Se despierta muy temprano el día del paseo.",
+      "options": {
+        "a": "2 – 1 – 3 – 4",
+        "b": "1 – 2 – 3 – 4",
+        "c": "2 – 3 – 1 – 4",
+        "d": "4 – 2 – 1 – 3"
+      },
+      "correct": "a"
+    },
+    {
+      "id": 22,
+      "category": "Orden cronológico",
+      "question": "Ordena lo que hace Rafael después de hablar con su abuela:\n1. Ordena la mochila.\n2. Recibe el consejo de leer las instrucciones dos veces.\n3. Revisa el horario y los cuadernos.\n4. Come lentamente en la mesa.",
+      "options": {
+        "a": "2 – 1 – 3 – 4",
+        "b": "1 – 2 – 3 – 4",
+        "c": "2 – 3 – 1 – 4",
+        "d": "3 – 2 – 1 – 4"
+      },
+      "correct": "a"
+    },
+    {
+      "id": 23,
+      "category": "Orden cronológico",
+      "question": "¿Cuál es el orden correcto?\n1. Rafael ordena su pieza y clasifica juguetes.\n2. Come con calma en el comedor.\n3. La abuela se despide y elogia la pieza.\n4. Decide botar lo que no sirve.",
+      "options": {
+        "a": "2 – 4 – 1 – 3",
+        "b": "1 – 2 – 3 – 4",
+        "c": "2 – 1 – 4 – 3",
+        "d": "4 – 2 – 1 – 3"
+      },
+      "correct": "a"
+    },
+    {
+      "id": 24,
+      "category": "Orden cronológico",
+      "question": "Ordena estos acontecimientos:\n1. Rafael se come cuatro dulces en casa de Anita.\n2. Practica mirar a los ojos con Lucas.\n3. Recibe una anotación positiva de la profesora de Inglés.\n4. Forma una sociedad de apoyo con Lucas.",
+      "options": {
+        "a": "1 – 2 – 3 – 4",
+        "b": "2 – 1 – 3 – 4",
+        "c": "1 – 3 – 2 – 4",
+        "d": "1 – 2 – 4 – 3"
+      },
+      "correct": "a"
+    },
+    {
+      "id": 25,
+      "category": "Orden cronológico",
+      "question": "Ordena el final de la historia:\n1. Evalúan los resultados con mamá y abuela.\n2. Lleva casi un mes practicando.\n3. La abuela le habla de valorar la mente rápida.\n4. Le ponen buena nota por su esfuerzo.",
+      "options": {
+        "a": "2 – 1 – 4 – 3",
+        "b": "1 – 2 – 3 – 4",
+        "c": "2 – 4 – 1 – 3",
+        "d": "2 – 1 – 3 – 4"
+      },
+      "correct": "a"
+    },
+    {
+      "id": 26,
+      "category": "Lenguaje",
+      "question": "¿Quién narra la historia?",
+      "options": {
+        "a": "Un narrador externo que todo lo sabe",
+        "b": "El propio Rafael (narrador en primera persona)",
+        "c": "La mamá de Rafael",
+        "d": "La abuela"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 27,
+      "category": "Lenguaje",
+      "question": "¿Qué tipo de texto es este libro principalmente?",
+      "options": {
+        "a": "Un cuento de terror",
+        "b": "Un relato realista en el que el protagonista cuenta sus experiencias y aprendizajes",
+        "c": "Una poesía",
+        "d": "Una noticia"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 28,
+      "category": "Lenguaje",
+      "question": "En la frase “Casi bien no es igual a bien, especialmente en matemática”, ¿qué está haciendo la profesora?",
+      "options": {
+        "a": "Elogiando a Rafael",
+        "b": "Explicando que en algunas materias la precisión es muy importante",
+        "c": "Castigando a todo el curso",
+        "d": "Contando un chiste"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 29,
+      "category": "Lenguaje",
+      "question": "¿Qué recurso usa mucho el autor para que entendamos cómo se siente Rafael?",
+      "options": {
+        "a": "Solo diálogos de adultos",
+        "b": "Pensamientos del personaje y ejemplos de su vida diaria",
+        "c": "Muchas descripciones de paisajes",
+        "d": "Listas de números"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 30,
+      "category": "Lenguaje",
+      "question": "La expresión “bajar las revoluciones” significa en el libro:",
+      "options": {
+        "a": "Apagar un auto",
+        "b": "Ir más despacio y con más calma",
+        "c": "Hablar más fuerte",
+        "d": "Correr más rápido"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 31,
+      "category": "Análisis profundo",
+      "question": "¿Por qué crees que a Rafael le cuesta tanto ir más lento aunque sabe que le va mejor?",
+      "options": {
+        "a": "Porque no le importa mejorar",
+        "b": "Porque su mente piensa muy rápido y está acostumbrado a actuar sin pausa; cambiar un hábito cuesta esfuerzo y práctica constante",
+        "c": "Porque su familia no lo ayuda",
+        "d": "Porque es flojo"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 32,
+      "category": "Análisis profundo",
+      "question": "¿Qué diferencia hay entre el Rafael del comienzo y el del final del libro?",
+      "options": {
+        "a": "Ninguna, sigue igual de apurado",
+        "b": "Al principio actúa sin pensar y se equivoca mucho; al final ha aprendido a frenar, organizar, escuchar y aprender de sus errores, aunque todavía le cuesta",
+        "c": "Al final ya no estudia",
+        "d": "Al final se pelea con todos"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 33,
+      "category": "Análisis profundo",
+      "question": "¿Por qué es importante que Rafael y Lucas se apoyen mutuamente?",
+      "options": {
+        "a": "Solo para jugar",
+        "b": "Porque cambiar un hábito es más fácil y motivador cuando alguien que tiene el mismo problema te acompaña y se cuenta los avances",
+        "c": "Porque la profesora se los ordenó",
+        "d": "Porque no tienen otros amigos"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 34,
+      "category": "Análisis profundo",
+      "question": "La abuela dice que una mente rápida que trabaja con tranquilidad es un gran regalo. ¿Qué quiere decir con eso?",
+      "options": {
+        "a": "Que hay que eliminar la rapidez",
+        "b": "Que la rapidez mental es una fortaleza si se combina con calma y atención; así se pueden lograr mejores resultados",
+        "c": "Que solo los adultos pueden tener mente rápida",
+        "d": "Que la tranquilidad no sirve"
+      },
+      "correct": "b"
+    },
+    {
+      "id": 35,
+      "category": "Análisis profundo",
+      "question": "Si tuvieras el mismo problema que Rafael, ¿qué estrategia del libro te parece más útil para empezar y por qué?",
+      "options": {
+        "a": "Ninguna sirve",
+        "b": "Empezar por una sola cosa concreta (por ejemplo, ordenar la mochila todos los días o mirar a los ojos al escuchar), porque los cambios grandes se logran con pasos pequeños y constantes",
+        "c": "Intentar cambiar todo de un día para otro",
+        "d": "Dejar de hacer las tareas"
+      },
+      "correct": "b"
+    }
+  ]
+}

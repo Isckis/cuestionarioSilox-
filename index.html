@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario</title>
+  <style>
+    /* Aquí va el CSS (diseño amigable para niños) */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f0f7ff;
+      color: #333;
+      line-height: 1.5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    header {
+      background: #3b82f6;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.6rem; margin-bottom: 6px; }
+    header p { opacity: 0.9; font-size: 0.95rem; }
+    .progress-container {
+      background: #e5e7eb;
+      height: 12px;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #22c55e;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    .quiz-area { padding: 28px; }
+    .question-card {
+      display: none;
+    }
+    .question-card.active { display: block; }
+    .question-number {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .question-text {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .options label {
+      display: block;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .options label:hover {
+      border-color: #3b82f6;
+      background: #eff6ff;
+    }
+    .options input {
+      margin-right: 12px;
+      transform: scale(1.2);
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      gap: 12px;
+    }
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-prev {
+      background: #e5e7eb;
+      color: #374151;
+    }
+    .btn-next, .btn-finish {
+      background: #3b82f6;
+      color: white;
+    }
+    .btn-next:hover, .btn-finish:hover {
+      background: #2563eb;
+    }
+    .results {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .score {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #3b82f6;
+      margin: 16px 0;
+    }
+    .message {
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="quiz-title">Cargando cuestionario...</h1>
+      <p id="quiz-description"></p>
+    </header>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div class="quiz-area">
+      <div id="questions-container">
+        <!-- Las preguntas se generan aquí con JavaScript -->
+      </div>
+
+      <div class="navigation">
+        <button class="btn-prev" id="btn-prev" onclick="prevQuestion()">← Anterior</button>
+        <button class="btn-next" id="btn-next" onclick="nextQuestion()">Siguiente →</button>
+        <button class="btn-finish" id="btn-finish" onclick="showResults()" style="display:none;">Ver mi nota</button>
+      </div>
+    </div>
+
+    <div class="results" id="results">
+      <h2>¡Terminaste!</h2>
+      <div class="score" id="score">0/0</div>
+      <div class="message" id="message"></div>
+      <button onclick="location.reload()">Volver a intentar</button>
+    </div>
+  </div>
+
+  <script>
+    // ============================================
+    // CONFIGURACIÓN - Aquí se carga el JSON
+    // ============================================
+    let quizData = null;
+    let currentQuestion = 0;
+    let answers = {};
+
+    // Cargar las preguntas (versión con archivo externo)
+    async function loadQuiz() {
+      try {
+        const response = await fetch('questions.json');
+        quizData = await response.json();
+        initQuiz();
+      } catch (error) {
+        // Si no encuentra el archivo, puedes pegar el JSON aquí como fallback
+        console.error("No se pudo cargar questions.json", error);
+        alert("Error al cargar las preguntas. Revisa que exista el archivo questions.json");
+      }
+    }
+
+    function initQuiz() {
+      document.getElementById('quiz-title').textContent = quizData.title;
+      document.getElementById('quiz-description').textContent = quizData.description || '';
+      
+      const container = document.getElementById('questions-container');
+      container.innerHTML = '';
+
+      quizData.questions.forEach((q, index) => {
+        const div = document.createElement('div');
+        div.className = `question-card ${index === 0 ? 'active' : ''}`;
+        div.id = `question-${index}`;
+
+        let optionsHTML = '';
+        for (const [key, value] of Object.entries(q.options)) {
+          optionsHTML += `
+            <label>
+              <input type="radio" name="q${q.id}" value="${key}" onchange="saveAnswer(${q.id}, '${key}')">
+              <strong>${key.toUpperCase()})</strong> ${value}
+            </label>
+          `;
+        }
+
+        div.innerHTML = `
+          <div class="question-number">Pregunta ${index + 1} de ${quizData.questions.length} · ${q.category || ''}</div>
+          <div class="question-text">${q.question}</div>
+          <div class="options">${optionsHTML}</div>
+        `;
+        container.appendChild(div);
+      });
+
+      updateProgress();
+    }
+
+    function saveAnswer(questionId, answer) {
+      answers[questionId] = answer;
+    }
+
+    function showQuestion(index) {
+      document.querySelectorAll('.question-card').forEach(card => card.classList.remove('active'));
+      document.getElementById(`question-${index}`).classList.add('active');
+      
+      document.getElementById('btn-prev').style.display = index === 0 ? 'none' : 'inline-block';
+      document.getElementById('btn-next').style.display = index === quizData.questions.length - 1 ? 'none' : 'inline-block';
+      document.getElementById('btn-finish').style.display = index === quizData.questions.length - 1 ? 'inline-block' : 'none';
+      
+      updateProgress();
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < quizData.questions.length - 1) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function updateProgress() {
+      const percent = ((currentQuestion + 1) / quizData.questions.length) * 100;
+      document.getElementById('progress-bar').style.width = percent + '%';
+    }
+
+    function showResults() {
+      let correct = 0;
+      quizData.questions.forEach(q => {
+        if (answers[q.id] === q.correct) correct++;
+      });
+
+      const total = quizData.questions.length;
+      const percentage = Math.round((correct / total) * 100);
+
+      document.getElementById('questions-container').style.display = 'none';
+      document.querySelector('.navigation').style.display = 'none';
+      document.getElementById('results').style.display = 'block';
+
+      document.getElementById('score').textContent = `${correct}/${total}`;
+      
+      let message = '';
+      if (percentage >= 90) message = '¡Excelente trabajo! 🌟 Dominaste el libro.';
+      else if (percentage >= 70) message = '¡Muy bien! 👏 Buen manejo de la lectura.';
+      else if (percentage >= 50) message = 'Bien, pero puedes mejorar. ¡Sigue practicando!';
+      else message = 'Necesitas repasar el libro con más calma. ¡Tú puedes!';
+
+      document.getElementById('message').textContent = message;
+    }
+
+    // Iniciar
+    loadQuiz();
+  </script>
+</body>
+</html>
